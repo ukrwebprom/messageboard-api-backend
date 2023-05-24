@@ -1,5 +1,5 @@
 const express = require("express");
-const mongoose = require('mongoose');
+/* const mongoose = require('mongoose'); */
 const cors = require("cors");
 const router = require("./routes");
 require('dotenv').config();
@@ -21,8 +21,8 @@ app.use((err, req, res, next) => {
 
 const start = async() => {
     try {
-        await mongoose.connect(DB_STICKERS);
-        console.log("MongoDB connected");
+/*         await mongoose.connect(DB_STICKERS);
+        console.log("MongoDB connected"); */
         app.listen(3000, () => {
             console.log("Server running. Use our API on port: 3000")
           })
